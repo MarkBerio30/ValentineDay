@@ -5,13 +5,14 @@ const texts = [
     "Hala! Sure ka na ba dito? 🤔",
     "Sure na sure ka na talaga? 😳 ",
     "Bakit parang hindi ka pa sure? 😢",
-    "Hala! Pag-isipan mo muna nang mabuti. 🤯 " ,
+    "Hala! Pag-isipan mo muna nang mabuti. 🤯 ",
     "100% sure ka na ba?" ,
     "If you click 'No' again, it will make me sad forever. 😭💔"
 ];
 
 document.getElementById('noButton').addEventListener('click', function() {
     noClickCount++;
+    document.getElementById('valentineHeading').style.display = 'none'; // Hide the heading
     if (noClickCount < 7) {
         document.getElementById('backgroundGif').src = gifSources[noClickCount];
         document.getElementById('valentineText').innerText = texts[noClickCount];
